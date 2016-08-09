@@ -172,6 +172,9 @@ return [
         // JWT Auth Provider
         Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
 
+        // Laravel API Doc
+        Mpociot\ApiDoc\ApiDocGeneratorServiceProvider::class,
+
     ],
 
     /*

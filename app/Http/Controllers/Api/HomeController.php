@@ -16,7 +16,7 @@ class HomeController extends ApiController
 {
 
     /**
-     *
+     * Get status
      *
      * @return \Illuminate\Database\Eloquent\Collection|static[]
      */

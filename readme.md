@@ -43,5 +43,8 @@ php artisan serve
 ### Test With Postman
 
 Import collection test in folder 
-
-    postman/simple-api-with-laravel5.json
+```postman/simple-api-with-laravel5.json```
+### Generate API Doc
+```
+php artisan api:generate --router="dingo" --routePrefix="v1"
+```

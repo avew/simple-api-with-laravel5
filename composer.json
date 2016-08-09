@@ -18,7 +18,8 @@
         "dingo/api": "1.0.*@dev",
         "tymon/jwt-auth": "0.5.*",
         "barryvdh/laravel-cors": "^0.8.1",
-        "doctrine/dbal": "~2.3"
+        "doctrine/dbal": "~2.3",
+        "mpociot/laravel-apidoc-generator": "^1.5"
     },
     "autoload": {
         "classmap": [
