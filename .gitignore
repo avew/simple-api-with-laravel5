@@ -3,9 +3,5 @@
 /public/storage
 Homestead.yaml
 Homestead.json
+.idea/*
 .env
-.idea/copyright/
-.idea/misc.xml
-.idea/modules.xml
-.idea/simple-api-with-laravel5.iml
-.idea/workspace.xml
