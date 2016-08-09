@@ -18,5 +18,9 @@ Route::get('/', function () {
 $api = app('Dingo\Api\Routing\Router');
 
 $api->version('v1', function ($api) {
+    
     $api->get('hello', 'App\Http\Controllers\Api\HomeController@index');
+
+    $api->post('authenticate', 'App\Http\Controllers\Auth\ApiAuthController@authenticate');
+
 });
