@@ -27,5 +27,8 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
 
 
-php artisan vendor:publish --provider="Dingo\Api\Provider\LaravelServiceProvider"
 php artisan migrate
+php artisan vendor:publish --provider="Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider" --tag=config
+php artisan vendor:publish --provider="Dingo\Api\Provider\LaravelServiceProvider"
+php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\JWTAuthServiceProvider"
+php artisan jwt:generate
