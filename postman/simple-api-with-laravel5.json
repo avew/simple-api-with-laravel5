@@ -1,0 +1,82 @@
+{
+  "id": "59866664-e03d-5311-3d81-08ae5174561d",
+  "name": "simple-api-with-laravel5",
+  "timestamp": 1470753761236,
+  "requests": [
+    {
+      "collectionId": "59866664-e03d-5311-3d81-08ae5174561d",
+      "id": "69e91db3-961f-d7bf-f087-c260c6fa51b3",
+      "name": "Authenticated",
+      "description": "Get user authenticated with token",
+      "url": "http://localhost:8000/api/authenticated",
+      "method": "GET",
+      "headers": "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6XC9cL2xvY2FsaG9zdDo4MDAwXC9hcGlcL2F1dGhlbnRpY2F0ZSIsImlhdCI6MTQ3MDc1OTUyMSwiZXhwIjoxNDcwNzYzMTIxLCJuYmYiOjE0NzA3NTk1MjEsImp0aSI6IjA4MTNiZGI5NzEzYmY1MDFhOTY0MjNmZDNmYmFhODNiIn0.nspEGNSglmxf_Z1XUKmBbTZ8D-ueAGo9RNhoxHNmzOk\n",
+      "data": [
+        {
+          "key": "email",
+          "value": "admin@example.com",
+          "type": "text"
+        },
+        {
+          "key": "password",
+          "value": "admin",
+          "type": "text"
+        }
+      ],
+      "dataMode": "params",
+      "timestamp": 0,
+      "version": 2,
+      "time": 1470759542918
+    },
+    {
+      "collectionId": "59866664-e03d-5311-3d81-08ae5174561d",
+      "id": "82a11c2a-201f-06d1-270a-0897d0fcf078",
+      "name": "Refreshed Token",
+      "description": "Get refreshed token",
+      "url": "http://localhost:8000/api/token",
+      "method": "GET",
+      "headers": "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6XC9cL2xvY2FsaG9zdDo4MDAwXC9hcGlcL2F1dGhlbnRpY2F0ZSIsImlhdCI6MTQ3MDc1OTUyMSwiZXhwIjoxNDcwNzYzMTIxLCJuYmYiOjE0NzA3NTk1MjEsImp0aSI6IjA4MTNiZGI5NzEzYmY1MDFhOTY0MjNmZDNmYmFhODNiIn0.nspEGNSglmxf_Z1XUKmBbTZ8D-ueAGo9RNhoxHNmzOk\n",
+      "data": [
+        {
+          "key": "email",
+          "value": "admin@example.com",
+          "type": "text"
+        },
+        {
+          "key": "password",
+          "value": "admin",
+          "type": "text"
+        }
+      ],
+      "dataMode": "params",
+      "timestamp": 0,
+      "version": 2,
+      "time": 1470759549520
+    },
+    {
+      "collectionId": "59866664-e03d-5311-3d81-08ae5174561d",
+      "id": "e6bd96cd-136e-f324-d611-4585a60ad2a2",
+      "name": "Authenticate",
+      "description": "Authenticate get token",
+      "url": "http://localhost:8000/api/authenticate",
+      "method": "POST",
+      "headers": "",
+      "data": [
+        {
+          "key": "email",
+          "value": "admin@example.com",
+          "type": "text"
+        },
+        {
+          "key": "password",
+          "value": "admin",
+          "type": "text"
+        }
+      ],
+      "dataMode": "params",
+      "timestamp": 0,
+      "version": 2,
+      "time": 1470759526822
+    }
+  ]
+}
