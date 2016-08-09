@@ -23,6 +23,11 @@ class ApiAuthController extends Controller
     /**
      * Authenticate user to get token
      *
+     * Authenticate a user with a `email` and `password`.
+     *
+     * @Post("/api/authenticate")
+     * @Versions({"v1"})
+     * @Request("email=foo@bar.com&password=bar", contentType="application/x-www-form-urlencoded")
      * @param Request $request
      * @return mixed
      */

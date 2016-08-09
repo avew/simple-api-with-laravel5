@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a368a6938c973d69b3a2e8f06780a0f2",
-    "content-hash": "e8123c3babd4e1e272f63af4e3d97487",
+    "hash": "50a7c8ddc608a9c7fc8678d231d1eecb",
+    "content-hash": "64d57387071e8bcf4021b22391509e2b",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -4609,7 +4609,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "dingo/api": 20
+        "dingo/api": 10
     },
     "prefer-stable": false,
     "prefer-lowest": false,
