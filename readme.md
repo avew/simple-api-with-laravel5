@@ -18,7 +18,7 @@ Simple demo of a Laravel API, using Dingo and JWT for authentication.
 
 ### Step 1: Clone the repo
 ```
-git clone https://github.com/avew/simple-api-with-laravel
+git clone https://github.com/avew/simple-api-with-laravel5
 ```
 
 ### Step 2: Prerequisites
