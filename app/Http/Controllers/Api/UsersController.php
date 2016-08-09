@@ -12,8 +12,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\ApiController;
 use App\Permission;
 use App\Role;
-use App\User;
-use Dingo\Api\Http\Request;
+use App\Transformers\UserTransformer;
 use Tymon\JWTAuth\Exceptions\JWTException;
 use Tymon\JWTAuth\Facades\JWTAuth;
 
@@ -38,12 +37,7 @@ class UsersController extends ApiController
         } catch (JWTException $ex) {
             return $this->response->error('Something went wrong');
         }
-        return \Response::json([
-            'data' => [
-                'email' => $user->email,
-                'registered_at' => $user->created_at->toDateTimeString()
-            ]
-        ]);
+        return $this->response->item($user, new UserTransformer());
     }
 
 
