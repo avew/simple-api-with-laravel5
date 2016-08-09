@@ -29,9 +29,6 @@ touch database/database.sqlite
 php artisan migrate
 php artisan db:seed
 php artisan key:generate
-php artisan vendor:publish --provider="Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider" --tag=config
-php artisan vendor:publish --provider="Dingo\Api\Provider\LaravelServiceProvider"
-php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\JWTAuthServiceProvider"
 php artisan jwt:generate
 
 ```
