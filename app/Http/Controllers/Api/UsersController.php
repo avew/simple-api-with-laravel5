@@ -10,8 +10,6 @@ namespace App\Http\Controllers\Api;
  */
 
 use App\Http\Controllers\ApiController;
-use App\Permission;
-use App\Role;
 use App\Transformers\UserTransformer;
 use Tymon\JWTAuth\Exceptions\JWTException;
 use Tymon\JWTAuth\Facades\JWTAuth;
@@ -47,19 +45,16 @@ class UsersController extends ApiController
      */
     public function refreshToken()
     {
-
         $token = JWTAuth::getToken();
         if (!$token) {
-            return $this->response->errorUnauthorized('Token is invalid');
+            return $this->response->errorMethodNotAllowed('Token not provided');
         }
         try {
             $refreshedToken = JWTAuth::refresh($token);
-
-        } catch (JWTException $ex) {
-            $this->response->error('Something went wrong');
+        } catch (JWTException $e) {
+            return $this->response->errorInternal('Not able to refresh Token');
         }
-
-        return $this->response->array(compact('refreshedToken'));
+        return $this->response->withArray(['token' => $refreshedToken]);
     }
 
 

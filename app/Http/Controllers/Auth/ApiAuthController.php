@@ -10,13 +10,13 @@ namespace App\Http\Controllers\Auth;
  */
 
 
-use App\Http\Controllers\ApiController;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Tymon\JWTAuth\Exceptions\JWTException;
 use Tymon\JWTAuth\Facades\JWTAuth;
 
 
-class ApiAuthController extends ApiController
+class ApiAuthController extends Controller
 {
 
 
@@ -44,4 +44,21 @@ class ApiAuthController extends ApiController
         // All good so return the token
         return $this->response->array(compact('token'))->setStatusCode(200);
     }
+
+
+    /**
+     * Log out
+     * Invalidate the token, so user cannot use it anymore
+     * They have to relogin to get a new token
+     *
+     * @param Request $request
+     */
+    public function logout(Request $request)
+    {
+        $this->validate($request, [
+            'token' => 'required'
+        ]);
+        JWTAuth::invalidate($request->input('token'));
+    }
+
 }

@@ -20,6 +20,9 @@ $api->version('v1', function ($api) {
 
     $api->post('authenticate', 'App\Http\Controllers\Auth\ApiAuthController@authenticate');
 
+    $api->post('logout', 'App\Http\Controllers\Auth\ApiAuthController@logout');
+
+
 });
 
 $api->version('v1', ['middleware' => 'api.auth'], function ($api) {
@@ -27,5 +30,6 @@ $api->version('v1', ['middleware' => 'api.auth'], function ($api) {
     $api->get('authenticated', 'App\Http\Controllers\Api\UsersController@authenticated');
 
     $api->get('token', 'App\Http\Controllers\Api\UsersController@refreshToken');
-    
+
+
 });
