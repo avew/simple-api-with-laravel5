@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2016-08-09.
+    * Generated on 2016-08-10.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -68,6 +68,7 @@ namespace PHPSTORM_META {
             'tymon.jwt.generate' instanceof \Tymon\JWTAuth\Commands\JWTGenerateCommand,
             'apidoc.generate' instanceof \Mpociot\ApiDoc\Commands\GenerateDocumentation,
             'apidoc.update' instanceof \Mpociot\ApiDoc\Commands\UpdateDocumentation,
+            'Barryvdh\Cors\Stack\CorsService' instanceof \Barryvdh\Cors\Stack\CorsService,
             'Tymon\JWTAuth\JWTAuth' instanceof \Tymon\JWTAuth\JWTAuth,
             'Tymon\JWTAuth\Providers\User\UserInterface' instanceof \Tymon\JWTAuth\Providers\User\EloquentUserAdapter,
             'Tymon\JWTAuth\Providers\JWT\JWTInterface' instanceof \Tymon\JWTAuth\Providers\JWT\NamshiAdapter,
@@ -218,6 +219,7 @@ namespace PHPSTORM_META {
             'tymon.jwt.generate' instanceof \Tymon\JWTAuth\Commands\JWTGenerateCommand,
             'apidoc.generate' instanceof \Mpociot\ApiDoc\Commands\GenerateDocumentation,
             'apidoc.update' instanceof \Mpociot\ApiDoc\Commands\UpdateDocumentation,
+            'Barryvdh\Cors\Stack\CorsService' instanceof \Barryvdh\Cors\Stack\CorsService,
             'Tymon\JWTAuth\JWTAuth' instanceof \Tymon\JWTAuth\JWTAuth,
             'Tymon\JWTAuth\Providers\User\UserInterface' instanceof \Tymon\JWTAuth\Providers\User\EloquentUserAdapter,
             'Tymon\JWTAuth\Providers\JWT\JWTInterface' instanceof \Tymon\JWTAuth\Providers\JWT\NamshiAdapter,
@@ -368,6 +370,7 @@ namespace PHPSTORM_META {
             'tymon.jwt.generate' instanceof \Tymon\JWTAuth\Commands\JWTGenerateCommand,
             'apidoc.generate' instanceof \Mpociot\ApiDoc\Commands\GenerateDocumentation,
             'apidoc.update' instanceof \Mpociot\ApiDoc\Commands\UpdateDocumentation,
+            'Barryvdh\Cors\Stack\CorsService' instanceof \Barryvdh\Cors\Stack\CorsService,
             'Tymon\JWTAuth\JWTAuth' instanceof \Tymon\JWTAuth\JWTAuth,
             'Tymon\JWTAuth\Providers\User\UserInterface' instanceof \Tymon\JWTAuth\Providers\User\EloquentUserAdapter,
             'Tymon\JWTAuth\Providers\JWT\JWTInterface' instanceof \Tymon\JWTAuth\Providers\JWT\NamshiAdapter,
@@ -518,6 +521,7 @@ namespace PHPSTORM_META {
             'tymon.jwt.generate' instanceof \Tymon\JWTAuth\Commands\JWTGenerateCommand,
             'apidoc.generate' instanceof \Mpociot\ApiDoc\Commands\GenerateDocumentation,
             'apidoc.update' instanceof \Mpociot\ApiDoc\Commands\UpdateDocumentation,
+            'Barryvdh\Cors\Stack\CorsService' instanceof \Barryvdh\Cors\Stack\CorsService,
             'Tymon\JWTAuth\JWTAuth' instanceof \Tymon\JWTAuth\JWTAuth,
             'Tymon\JWTAuth\Providers\User\UserInterface' instanceof \Tymon\JWTAuth\Providers\User\EloquentUserAdapter,
             'Tymon\JWTAuth\Providers\JWT\JWTInterface' instanceof \Tymon\JWTAuth\Providers\JWT\NamshiAdapter,

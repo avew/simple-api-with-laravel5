@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Asia/Jakarta',
 
     /*
     |--------------------------------------------------------------------------
@@ -174,7 +174,9 @@ return [
 
         // Laravel API Doc
         Mpociot\ApiDoc\ApiDocGeneratorServiceProvider::class,
-
+        
+        // Laravel Cors
+        Barryvdh\Cors\ServiceProvider::class,
     ],
 
     /*

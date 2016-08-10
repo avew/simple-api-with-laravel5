@@ -10,44 +10,73 @@ namespace App\Http\Controllers\Auth;
  */
 
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\ApiController;
+use App\User;
 use Illuminate\Http\Request;
+use JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
-use Tymon\JWTAuth\Facades\JWTAuth;
 
 
-class ApiAuthController extends Controller
+class ApiAuthController extends ApiController
 {
 
 
     /**
      * Authenticate user to get token
      *
-     * Authenticate a user with a `email` and `password`.
-     *
-     * @Post("/api/authenticate")
-     * @Versions({"v1"})
-     * @Request("email=foo@bar.com&password=bar", contentType="application/x-www-form-urlencoded")
      * @param Request $request
      * @return mixed
      */
     public function authenticate(Request $request)
     {
+        $this->validate($request, [
+            'email' => 'required|email',
+            'password' => 'required|min:4',
+        ]);
+
+
         // Grab credentials from the request
         $credentials = $request->only('email', 'password');
+
 
         try {
             // Attempt to verify the credentials and create a token for the user
             if (!$token = JWTAuth::attempt($credentials)) {
-                return $this->response->errorUnauthorized();
+                return response()->error('Invalid credentials', 401);
             }
         } catch (JWTException $ex) {
             // Something went wrong whilst attempting to encode the token
-            return $this->response->errorInternal($ex);
+            return response()->error('Could not create token', 500);
+
         }
 
-        // All good so return the token
-        return $this->response->array(compact('token'))->setStatusCode(200);
+        // All good so return user and token
+        return response()->json(compact('token'), 200);
+    }
+
+    /**
+     * Register User
+     *
+     * @param Request $request
+     * @return mixed
+     */
+    public function register(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required|min:3',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:8',
+        ]);
+
+        $user = new User;
+        $user->name = trim($request->name);
+        $user->email = trim(strtolower($request->email));
+        $user->password = bcrypt($request->password);
+        $user->save();
+
+        $token = JWTAuth::fromUser($user);
+
+        return response()->json(compact('user', 'token'),200);
     }
 
 
